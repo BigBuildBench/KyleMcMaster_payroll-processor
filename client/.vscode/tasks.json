@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "problemMatcher": [],
+      "label": "Angular: Install Packages",
+      "detail": "Install npm project packages for Angular client"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "dependsOn": ["Angular: Install Packages"],
+      "problemMatcher": [],
+      "label": "Angular: Serve",
+      "detail": "Serves the Angular client on http://localhost:4201"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "dependsOn": ["Angular: Install Packages"],
+      "problemMatcher": [],
+      "label": "Angular: Build",
+      "detail": "Builds the Angular client for production"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+@import "../node_modules/bootstrap/scss/bootstrap";
+// boostrap 5
+@import 'ngx-toastr/toastr-bs5-alert';
+
+@import './app/shared/styles/mixins';
+:root {
+  @each $key, $value in $variables {
+    --#{$key}: #{$value};
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  @include var(background-color, app-background);
+}
+
+.full-height {
+  height: calc(100vh - 60px);
+}
+
+.app-background {
+  @include var(background-color, app-background);
+  @include var(color, light);
+}
+
+.border-light {
+  @include var(border-color, light);
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+.border-success {
+  @include var(border-color, success);
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+.border-info {
+  @include var(border-color, info);
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+.border-warning {
+  @include var(border-color, warning);
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+}

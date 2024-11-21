@@ -1,0 +1,18 @@
+@import '../../shared/styles/mixins';
+
+tbody {
+  @include var(color, light);
+}
+
+thead {
+  @include var(color, light);
+}
+
+tbody :hover {
+  @include var(background-color, light);
+  @include var(color, app-background);
+}
+
+table {
+  @include var(background-color, app-background);
+}

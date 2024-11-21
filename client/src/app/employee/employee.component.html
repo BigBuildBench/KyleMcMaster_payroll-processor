@@ -1,0 +1,27 @@
+<div class="ms-3 me-3">
+  <div class="row full-height">
+    <div class="col-2 border-light">
+      <div class="row" (click)="onCreate()">
+        <div class="list-group-item list-group-item-action app-background">
+          <div class="row">
+            <div class="col-10">
+              <span class="ms-1">Create Employee</span>
+            </div>
+            <div class="col-2"><fa-icon [icon]="faPlus"> </fa-icon></div>
+          </div>
+        </div>
+      </div>
+      <app-employee-list
+        (selected)="onSelectEmployee($event)"
+        [employees]="this.employees | async"
+      ></app-employee-list>
+    </div>
+    <div class="col-10 border-info app-background">
+      <app-employee-create *ngIf="uiState === 'create'"></app-employee-create>
+      <app-employee-detail
+        *ngIf="uiState === 'detail'"
+        [employee]="this.employee | async"
+      ></app-employee-detail>
+    </div>
+  </div>
+</div>

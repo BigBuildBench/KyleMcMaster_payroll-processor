@@ -1,0 +1,6 @@
+{
+  "azureFunctions.deploySubpath": "PayrollProcessor.Functions.Api/bin/Release/net6.0/publish",
+  "azureFunctions.projectLanguage": "C#",
+  "azureFunctions.projectRuntime": "~4",
+  "azureFunctions.preDeployTask": "publish"
+}

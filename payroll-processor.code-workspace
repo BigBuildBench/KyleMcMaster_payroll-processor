@@ -1,0 +1,80 @@
+{
+  "folders": [
+    {
+      "path": "docs",
+      "name": "docs"
+    },
+    {
+      "path": "api",
+      "name": "api"
+    },
+    {
+      "path": "client",
+      "name": "angular"
+    },
+    {
+      "path": "vue-client",
+      "name": "vue"
+    },
+    {
+      "path": ".",
+      "name": "root"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "node_modules": true,
+      "api": true,
+      "client": true,
+      "docs": true,
+      "**/bin": true,
+      "**/obj": true,
+      "**/dist": true
+    },
+
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+
+    "[csharp]": {
+      "editor.defaultFormatter": "ms-dotnettools.csharp",
+      /* Not enabled yet:
+        https://github.com/OmniSharp/omnisharp-vscode/issues/2796
+        https://github.com/OmniSharp/omnisharp-roslyn/pull/1581
+      */
+      "editor.codeActionsOnSave": {}
+    },
+
+    "omnisharp.defaultLaunchSolution": "PayrollProcessor.sln",
+    "omnisharp.autoStart": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.useEditorFormattingSettings": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-azuretools.vscode-azurefunctions",
+      "ms-dotnettools.csharp",
+      "esbenp.prettier-vscode",
+      "DavidAnson.vscode-markdownlint",
+      "EditorConfig.EditorConfig",
+      "ms-vscode.vscode-typescript-tslint-plugin",
+      "dozerg.tsimportsorter",
+      "stylelint.vscode-stylelint",
+      "k--kato.docomment",
+      "jchannon.csharpextensions",
+      "vstirbu.vscode-mermaid-preview",
+      "ms-azuretools.vscode-cosmosdb",
+      "johnsoncodehk.volar",
+      "johnsoncodehk.vscode-typescript-vue-plugin"
+    ]
+  }
+}

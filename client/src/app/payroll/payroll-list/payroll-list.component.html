@@ -1,0 +1,28 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Payroll Period</th>
+      <th scope="col">Check Date</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let payroll of payrolls">
+      <td scope="row">
+        {{ payroll.employeeFirstName }} {{ payroll.employeeLastName }}
+      </td>
+      <td>{{ payroll.payrollPeriod }}</td>
+      <td>{{ payroll.checkDate | date }}</td>
+      <td>{{ payroll.grossPayroll | currency }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </tfoot>
+</table>
